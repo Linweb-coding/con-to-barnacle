@@ -1,0 +1,259 @@
+/* 导航 */
+.swp1{
+  font-size: 50px;
+  height: 800.65rpx;
+}
+.swp2{
+  text-align: center;
+  line-height: 800.65rpx;
+}
+.swp2:nth-child(1){background-color: orange;}
+.swp2:nth-child(2){background-color: skyblue;}
+.swp2>image{width: 100%;}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx;
+}
+.function-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx;
+}
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.theme-selection {
+  padding: 20rpx;
+  margin: 10rpx 0;
+}
+
+.section-title {
+  display: block;
+  text-align: center;
+  margin: 25rpx 0;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 2rpx;
+}
+.theme-scroll-view {
+  width: 100%;
+  padding: 10rpx 0 30rpx 0;
+  -webkit-overflow-scrolling: touch; /* 优化iOS滑动体验 */
+}
+
+.theme-item-wrapper {
+  display: flex;
+  padding: 0 10rpx;
+}
+
+.theme-item {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 12rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  flex-shrink: 0;
+  background-color: #f5f5f5; /* 图片加载前的背景 */
+}
+
+.theme-item:hover {
+  transform: translateY(-4rpx);
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+
+.theme-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.theme-item:active .theme-image {
+  transform: scale(1.05);
+}
+
+.theme-item-text {
+  padding: 12rpx 16rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 适配不同屏幕尺寸 */
+@media screen and (max-width: 375px) {
+  .theme-item {
+    width: 280rpx;
+    height: 280rpx;
+  }
+}
+.premium-homestays {
+  padding: 20rpx;
+}
+.homestay-item {
+  border: 1px solid #ccc;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.homestay-img-container {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+}
+.homestay-img-container image {
+  width: 100%;
+  height: 100%;
+}
+.discount-tag {
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  background-color: red;
+  color: white;
+  padding: 5rpx 10rpx;
+  border-radius: 3rpx;
+  font-size: 20rpx;
+}
+.homestay-info {
+  margin-top: 10rpx;
+}
+.homestay-title {
+  font-size: 28rpx;
+}
+.homestay-desc {
+  font-size: 24rpx;
+  color: #666;
+}
+.price-info {
+  margin-top: 10rpx;
+}
+.price {
+  color: orange;
+  font-size: 28rpx;
+}
+.original-price {
+  color: #999;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.booked-num {
+  color: #999;
+  font-size: 24rpx;
+  float: right;
+}
+.reserve-button {
+  /* position: absolute; */
+  top:10rpx;
+  left: 150rpx;
+  background-color: orange;
+  color: white;
+  padding: 10rpx 20rpx;
+  border-radius: 50rpx;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item1 {
+  width: 48%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* 添加图片容器高度和其他样式优化 */
+.item1 image {
+  width: 100%;
+  height: 150px;  /* 添加固定高度 */
+  object-fit: cover;  /* 保持图片比例并覆盖容器 */
+}
+.title1 {
+  padding: 5px;
+  font-size: 16px;
+  color: black;
+}
+.price1 {
+  padding: 0 5px;
+  color: orange;
+  font-size: 17px;
+}
+.booked1 {
+  padding: 0 5px;
+  color: gray;
+  font-size: 14px;
+}
+
+.strategy-section {
+  padding: 10rpx;
+}
+.strategy-item {
+  width: 45%;
+  height: 290rpx;
+  padding: 15rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+.strategy-item image {
+  width: 100%;
+}
+.strategy-item-text {
+  padding: 10rpx;
+  text-align: center;
+  font-size: 24rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* 图标 */
+.contact-buttons {
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.contact-button {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 0.2);
+}
+.contact-button image {
+  width: 50%;
+  height: 50%;
+}  

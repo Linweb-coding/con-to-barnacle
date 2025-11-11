@@ -1,0 +1,107 @@
+.container {
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.article-detail {
+  padding: 20rpx;
+}
+
+.article-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 20rpx;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+
+.article-content {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.8;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20rpx 0;
+  border-radius: 10rpx;
+}
+
+/* 评论区样式 */
+.comment-section {
+  /* border: 1px solid #ccc; */
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+
+.no-comment {
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  border-top: 1rpx solid #e0e0e0;
+  border-bottom: 1rpx solid #e0e0e0;
+  margin: 20rpx 0;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-button image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.action-button text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.contact-buttons {
+  position: fixed;
+  bottom: 60rpx;
+  right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.contact-button {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+}
+
+.contact-button image {
+  width: 40rpx;
+  height: 40rpx;
+}

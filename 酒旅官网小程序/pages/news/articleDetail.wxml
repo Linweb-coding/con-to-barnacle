@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="article-detail">
+    <text class="article-title">{{article.title}}</text>
+    <view class="article-meta">
+      <text class="article-date">{{article.date}}</text>
+      <text class="article-readcount">阅读 {{article.readCount || 0}}</text>
+    </view>
+    <view class="article-content" decode="{{true}}">
+      <rich-text nodes="{{article.content}}"></rich-text>
+    </view>
+  </view>
+
+  <!-- 评论区 -->
+  <view class="comment-section">评论区
+    <view class="no-comment">
+      {{noCommentText}}
+    </view>
+  </view>
+
+  <!-- 互动按钮 -->
+  <view class="action-buttons">
+    <view class="action-button" bindtap="likeArticle">
+      <image src="/images/like-icon.png"></image>
+      <text>点赞</text>
+    </view>
+    <view class="action-button" bindtap="commentArticle">
+      <image src="/images/comment-icon.png"></image>
+      <text>评论</text>
+    </view>
+    <view class="action-button" bindtap="shareArticle">
+      <image src="/images/share-icon.png"></image>
+      <text>分享</text>
+    </view>
+  </view>
+
+  <!-- 底部联系按钮 -->
+  <view class="contact-buttons">
+    <view class="contact-button" bindtap="goBack">
+      <image src="/images/back-icon.png"></image>
+    </view>
+    <view class="contact-button" bindtap="call">
+      <image src="/images/phone-icon.png"></image>
+    </view>
+    <view class="contact-button" bindtap="chat">
+      <image src="/images/chat-icon.png"></image>
+    </view>
+  </view>
+</view>

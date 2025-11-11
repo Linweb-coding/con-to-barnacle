@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="tab-bar">
+    <view class="tab-item {{activeTab === 'all'? 'active' : ''}}" bindtap="switchTab" data-tab="all">全部</view>
+    <view class="tab-item {{activeTab === 'discount'? 'active' : ''}}" bindtap="switchTab" data-tab="discount">优惠活动</view>
+    <view class="tab-item {{activeTab === 'homestay'? 'active' : ''}}" bindtap="switchTab" data-tab="homestay">精品民宿</view>
+  </view>
+  <view class="content">
+    <!-- 精品民宿分类 -->
+    <view class="item" wx:if="{{activeTab === 'homestay' || activeTab === 'all'}}" bindtap="navigateToDetail" data-url="petHotel">
+      <image src="https://3622616.s81i.faiusr.com/4/101/AFEI2I3dARAEGAAg3I7isQYooMfXxAMw4AE4sQFAZQ.png" mode="aspectFill"></image>
+      <text class="title">宠物出游酒店</text>
+      <text class="price">¥350.00</text>
+      <text class="booked">已预约: 3</text>
+    </view>
+    <view class="item" wx:if="{{activeTab === 'homestay' || activeTab === 'all'}}" bindtap="navigateToDetail" data-url="amusementHomestay">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgu5PisQYo6Kz-yQIw7gU47gVAZQ.jpg" mode="aspectFill"></image>
+      <text class="title">游乐园亲子民宿</text>
+      <text class="price">¥490.00</text>
+      <text class="booked">已预约: 2</text>
+    </view>
+    <view class="item" wx:if="{{activeTab === 'homestay' || activeTab === 'all'}}" bindtap="navigateToDetail" data-url="camping">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgqpPisQYo_LHFYDDuBTjuBUBl.jpg" mode="aspectFill"></image>
+      <text class="title">宝藏营地度假</text>
+      <text class="price">¥388.00</text>
+      <text class="booked">已预约: 2</text>
+    </view>
+    <view class="item" wx:if="{{activeTab === 'homestay' || activeTab === 'all'}}" bindtap="navigateToDetail" data-url="hotSpring">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgmpPisQYo-q722wEw7gU47gVAZQ.jpg" mode="aspectFill"></image>
+      <text class="title">温泉酒店度假村</text>
+      <text class="price">¥490.00</text>
+      <text class="booked">已预约: 2</text>
+    </view>
+    
+    <!-- 优惠活动分类 -->
+    <view class="item" wx:if="{{activeTab === 'discount' || activeTab === 'all'}}" bindtap="navigateToDetail" data-url="ancientTownHomestay">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAggJPisQYowImnggUw7gU47gVAZQ.jpg" mode="aspectFill"></image>
+      <text class="title">悠闲古镇乡村民宿</text>
+      <text class="price">¥1120.00</text>
+      <text class="booked">已预约: 0</text>
+    </view>
+    <view class="item" wx:if="{{activeTab === 'discount' || activeTab === 'all'}}" bindtap="navigateToDetail" data-url="seaViewHomestay">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAg0ZLisQYogNWAzAEw7gU47gVAZQ.jpg" mode="aspectFill"></image>
+      <text class="title">绝美海景房民宿</text>
+      <text class="price">¥990.00</text>
+      <text class="booked">已预约: 0</text>
+    </view>
+  </view>
+   <!-- 图标 -->
+   <view class="contact-buttons">
+  <view class="contact-button" bindtap="call">
+    <image src="/images/phone-icon.png"></image>
+  </view>
+  <view class="contact-button" bindtap="chat">
+    <image src="/images/chat-icon.png"></image>
+  </view>
+  </view>
+</view>

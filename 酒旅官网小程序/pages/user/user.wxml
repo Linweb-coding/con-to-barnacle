@@ -1,0 +1,53 @@
+<view class="header" bindtap="goToLogin">
+  <view class="avatar-container">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </view>
+  <text class="login-text">请点击登录</text>
+</view>
+  <view class="order"><text class="order-title">所有订单</text></view>
+<view class="order-section">
+  <view class="order-status-container">
+    <view class="order-status" bindtap="goToOrders?type=unpaid" wx:for="{{orderStatusList}}" wx:key="index">
+      <view class="icon-container">
+        <image class="icon" src="{{item.icon}}"></image>
+        <view class="badge" wx:if="{{item.badge}}">{{item.badge}}</view>
+      </view>
+      <text class="status-text">{{item.text}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="message-section" bindtap="goToMessages">
+  <text class="section-title">最新消息</text>
+  <view class="message-badge">
+    <view class="badge-circle" wx:if="{{newMessageCount}}">{{newMessageCount}}</view>
+  </view>
+</view>
+
+<view class="subscription-section" bindtap="goToSubscriptions">
+  <text class="section-title">我的订阅</text>
+</view>
+
+<view class="form-section" bindtap="goToForms">
+  <text class="section-title">我的表单</text>
+</view>
+
+<view class="collection-section" bindtap="goToCollections">
+  <text class="section-title">我的收藏</text>
+</view>
+
+<view class="phone-section">
+    <image src="{{icon}}" mode="widthFix" class="phone-icon"></image>
+  <text class="phone-number">{{phoneNumber}}</text>
+</view>
+
+<button class="logout-button" bindtap="logout">退出当前登录</button>
+ <!-- 图标 -->
+ <view class="contact-buttons">
+  <view class="contact-button" bindtap="call">
+    <image src="/images/phone-icon.png"></image>
+  </view>
+  <view class="contact-button" bindtap="chat">
+    <image src="/images/chat-icon.png"></image>
+  </view>
+  </view>

@@ -1,0 +1,110 @@
+<view>
+  <swiper class="swp1" autoplay="true" interval="2000" indicator-dots indicator-color="#fff" indicator-active-color="red" circular="true">
+    <swiper-item class="swp2">
+      <image mode="widthFix" src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgzYnisQYo1Kuo4wUw7gU4oAZAZQ.jpg"/>
+    </swiper-item>
+    <swiper-item class="swp2">
+      <image mode="widthFix" src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgzYnisQYo6ojn4Qcw7gU4oAZAZQ.jpg"/>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 功能按钮 -->
+<view class="function-buttons">
+  <view class="button" bindtap="navigateToReservation">
+    <image src="https://3622616.s81i.faiusr.com/4/101/AFEI2I3dARAEGAAgporisQYo0tqisgYwUDhQQGU.png"></image>
+    <text>民宿预约</text>
+  </view>
+  <view class="button" bindtap="navigateToStrategy">
+    <image src="https://3622616.s81i.faiusr.com/4/101/AFEI2I3dARAEGAAgtIrisQYoyOnfWDBQOFBAZQ.png"></image>
+    <text>民宿攻略</text>
+  </view>
+  <view class="button" bindtap="navigateToPremium">
+    <image src="https://3622616.s81i.faiusr.com/4/101/AFEI2I3dARAEGAAgworisQYoxeakyQYwUDhQQGU.png"></image>
+    <text>精品民宿</text>
+  </view>
+  <view class="button" bindtap="navigateToDiscount">
+    <image src="https://3622616.s81i.faiusr.com/4/101/AFEI2I3dARAEGAAguovisQYo7NDH8wQwUDhQQGU.png"></image>
+    <text>优惠活动</text>
+  </view>
+</view>
+<!-- 主题精选 -->
+<view class="theme-selection">
+  <text class="section-title">· | 主题精选 | ·</text>
+  <scroll-view class="theme-scroll-view" scroll-x="true" show-scrollbar="false" enable-flex="true">
+    <view class="theme-item-wrapper">
+      <view class="theme-item" wx:for="{{themeList}}" wx:key="id" 
+            bindtap="navigateToThemeDetail" data-id="{{item.id}}">
+        <image class="theme-image" src="{{item.imgUrl}}" mode="aspectFill" lazy-load></image>
+        <text class="theme-item-text">{{item.title}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 精品民宿 -->
+<view class="premium-homestays">
+  <text class="section-title">· | 精品民宿 | ·</text>
+  <view class="homestay-item" wx:for="{{premiumList}}" wx:key="index" bindtap="navigateToHomestayDetail">
+    <view class="homestay-img-container">
+      <image src="{{item.imgUrl}}" mode="aspectFill"></image>
+      <view class="discount-tag" wx:if="{{item.discount}}">促</view>
+    </view>
+    <view class="homestay-info">
+      <text class="homestay-title">{{item.title}}</text>
+      <text class="homestay-desc">{{item.desc}}</text>
+    </view>
+    <view class="price-info">
+      <text class="price">￥{{item.price}}</text>
+      <text class="original-price" style="text-decoration: line-through;">￥{{item.originalPrice}}</text>
+      <text class="booked-num">已预约: {{item.bookedNum}}</text>
+    </view>
+    <button class="reserve-button" bindtap="reserveHomestay">立即预约</button>
+  </view> 
+  <!-- 精品民宿2 -->  
+  
+  <text class="section-title" >· | 精品民宿 | ·</text>
+  <view class="content">
+  <view class="item1" bindtap="navigateToDetail" data-url="petHotel">
+  
+      <image src="https://3622616.s81i.faiusr.com/4/101/AFEI2I3dARAEGAAg3I7isQYooMfXxAMw4AE4sQFAZQ.png" mode="aspectFill"></image>
+      <text class="title1">宠物出游酒店</text>
+      <text class="price1">¥350.00</text>
+      <text class="booked1">已预约: 3</text>
+    </view>
+    <view class="item1" bindtap="navigateToDetail" data-url="amusementHomestay">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgu5PisQYo6Kz-yQIw7gU47gVAZQ.jpg" mode="aspectFill"></image>
+      <text class="title1">游乐园亲子民宿</text>
+      <text class="price1">¥490.00</text>
+      <text class="booked1">已预约: 2</text>
+    </view>
+    <view class="item1" bindtap="navigateToDetail" data-url="camping">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgqpPisQYo_LHFYDDuBTjuBUBl.jpg" mode="aspectFill"></image>
+      <text class="title1">宝藏营地度假</text>
+      <text class="price1">¥388.00</text>
+      <text class="booked1">已预约: 2</text>
+    </view>
+    <view class="item1" bindtap="navigateToDetail" data-url="hotSpring">
+      <image src="https://3622616.s81i.faiusr.com/2/101/AFEI2I3dARACGAAgmpPisQYo-q722wEw7gU47gVAZQ.jpg" mode="aspectFill"></image>
+      <text class="title1">温泉酒店度假村</text>
+      <text class="price1">¥490.00</text>
+      <text class="booked1">已预约: 2</text>
+    </view>
+</view> 
+</view>
+<!-- 民宿攻略 -->
+<view class="strategy-section">
+  <text class="section-title">· | 民宿攻略 | ·</text>
+  <view class="strategy-item" wx:for="{{strategyList}}" wx:key="index" bindtap="navigateToStrategyDetail">
+    <image src="{{item.imgUrl}}" mode="widthFix"></image>
+    <text class="strategy-item-text">{{item.title}}</text>
+  </view>
+  <!-- 图标 -->
+  <view class="contact-buttons">
+  <view class="contact-button" bindtap="call">
+    <image src="/images/phone-icon.png"></image>
+  </view>
+  <view class="contact-button" bindtap="chat">
+    <image src="/images/chat-icon.png"></image>
+  </view>
+  </view>
+</view>

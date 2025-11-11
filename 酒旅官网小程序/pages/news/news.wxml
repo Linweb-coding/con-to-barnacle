@@ -1,0 +1,20 @@
+<view class="article-container">
+  <view class="article-item" wx:for="{{articleList}}" wx:key="index" >
+    <view class="article-content" >
+      <text class="article-title" bindtap="goToArticleDetail" data-id="{{index}}">{{item.title}}</text>
+      <text class="article-desc" bindtap="goToArticleDetail" data-id="{{index}}">{{item.desc}}</text>
+      <text class="article-date">{{item.date}}</text>
+    </view>
+    <view class="article-img">
+      <image src="{{item.imgUrl}}" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+<view class="contact-buttons">
+  <view class="contact-button" bindtap="call">
+    <image src="/images/phone-icon.png"></image>
+  </view>
+  <view class="contact-button" bindtap="chat">
+    <image src="/images/chat-icon.png"></image>
+  </view>
+</view>
