@@ -1,0 +1,72 @@
+<view>
+  <view class="header">
+    <image src="http://8.138.84.102/images/peisong.jpg" mode="aspectFill"></image>
+  </view>
+  <text class="section-title" style="text-align: center;">--配送方式--</text>
+  <view class="content">
+    <view class="section delivery-method">
+      <text class="section-title">一、商品配送</text>
+      <view class="steps">
+        <view class="step-item">
+          <text class="step-number">1</text>
+          <text class="step-text">客户在客户端上选择好产品后留下电话和地址</text>
+        </view>
+        <view class="step-item">
+          <text class="step-number">2</text>
+          <text class="step-text">我们进行商品提交与送货人员配送</text>
+        </view>
+        <view class="step-item">
+          <text class="step-number">3</text>
+          <text class="step-text">客户进行商品清点无误后，请客户现场付款、开具收据</text>
+        </view>
+        <view class="step-item">
+          <text class="step-number">4</text>
+          <text class="step-text">商品配送需额外加收一次10元的费用</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class="section pickup-method">
+      <text class="section-title">二、上门自提</text>
+      <view class="steps">
+        <view class="step-item">
+          <text class="step-number">1</text>
+          <text class="step-text">客户到达自提点后，请与我们的服务人员联系</text>
+        </view>
+        <view class="step-item">
+          <text class="step-number">2</text>
+          <text class="step-text">服务人员去仓库拿货期间，请客户在提货点等候产品</text>
+        </view>
+        <view class="step-item">
+          <text class="step-number">3</text>
+          <text class="step-text">商品清点无误后，请客户现场付款、开具收据</text>
+        </view>
+        <view class="step-item">
+          <text class="step-number">4</text>
+          <text class="step-text">请客户在收据上签字确认，提取商品</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class="contact-section">
+      <text class="contact-title">联系我们</text>
+      <view class="contact-info">
+        <!-- 修改图片路径 -->
+        <image src="/images/phone-icon.png" mode="aspectFit"></image>
+        <text class="phone-number">400-123-4567</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="footer">
+    <text class="copyright">© 2025 配送服务中心</text>
+  </view>
+  <view class="contact-buttons">
+  <view class="contact-button" bindtap="call">
+    <image src="/images/phone-icon.png"></image>
+  </view>
+  <view class="contact-button" bindtap="chat">
+    <image src="/images/chat-icon.png"></image>
+  </view>
+  </view>
+</view>    

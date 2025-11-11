@@ -1,0 +1,109 @@
+.container {
+  padding: 16px;
+
+}
+
+/* 分页容器 */
+.page {
+  padding: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.form-item {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #666;
+}
+
+input, textarea, picker view {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 80px;
+}
+
+button {
+  margin-top: 8px;
+}
+
+.file-msg {
+  margin-top: 4px;
+  color: #0088ff;
+  cursor: pointer;
+}
+
+.preview {
+  margin-top: 8px;
+}
+
+.preview image, .preview video {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* 星级评分 */
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars image {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+.submit-time {
+  margin-top: 16px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* 分页指示器 */
+.page-indicator {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+/* app.wxss */
+.floating-home {
+  position: fixed;
+  bottom: 150rpx;
+  right: 30rpx; /* 修改为 right 并设置合适的值 */
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  z-index: 999; /* 确保浮窗在最上层 */
+}
+
+.floating-home image {
+  width: 50%;
+  height: 50%;
+}
+
+.floating-home image {
+  width: 50%;
+  height: 50%;
+}

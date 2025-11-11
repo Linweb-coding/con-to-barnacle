@@ -1,0 +1,77 @@
+.order-list {
+  padding: 10rpx;
+}
+
+/* 导航栏样式 */
+.tab-bar {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #f1f1f1;
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  color: #333;
+}
+.tab-item.active {
+  color: #ff5722;
+  border-bottom: 2px solid #ff5722;
+}
+
+/* 订单项样式 */
+.order-item {
+  border: 1px solid #f1f1f1;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+.order-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.order-id {
+  color: #666;
+}
+.order-status {
+  color: #ff5722; /* 可根据不同状态定义不同颜色 */
+}
+.order-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.order-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.service-name {
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.service-desc {
+  color: #999;
+  margin-bottom: 10rpx;
+}
+.price {
+  color: #ff5722;
+}
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 10rpx;
+}
+.order-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20rpx;
+}
+.action-btn {
+  margin-left: 20rpx;
+  padding: 15rpx 30rpx;
+  border-radius: 8rpx;
+}

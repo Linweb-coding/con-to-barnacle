@@ -1,0 +1,32 @@
+<view class="container"> 
+  <text class="section-title">-门店环境1-</text>
+  <image class="env-img" src="http://8.138.84.102/images/mendianhuanjing.jpg"></image>
+  <text class="section-title">-门店环境1-</text>
+  <image class="env-img" src="http://8.138.84.102/images/mdhj2.jpg"></image>
+  <text class="section-title">-门店环境2-</text>
+  <image class="env-img" src="http://8.138.84.102/images/mdhj3.jpg"></image>
+  <text class="section-title">-门店环境3-</text>
+  <image class="env-img" src="http://8.138.84.102/images/mdhj4.jpg"></image>
+</view>
+<view class="title">门店环境</view>
+ <!-- 固定在底部的按钮组 -->
+ <view class="btn-group fixed-bottom">
+    <view class="btn-item" bindtap="callPhone">
+      <image src="/images/phone-icon.png"></image>
+      <text>电话</text>
+    </view>
+    <view class="btn-item" bindtap="openLocation">
+      <image src="/images/location-icon.png"></image>
+      <text>地址</text>
+    </view>
+    <button class="consult-btn" bindtap="goConsult">马上咨询</button>
+  </view>
+  <!-- 底部固定按钮 -->
+  <view class="contact-buttons">
+  <view class="contact-button" bindtap="goHome">
+    <image src="/images/icon1.png"></image>
+  </view>
+  <view class="contact-button" bindtap="makeCall">
+    <image src="/images/phone-icon.png"></image>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/huanjing",
+    "pages/logs/logs",
+    "pages/peisong/peisong",
+    "pages/booking/booking",
+    "pages/booking/detail",
+    "pages/user/user",
+    "pages/user/order",
+    "pages/user/news",
+    "pages/user/biaodan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "生鲜蔬果配送小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#de443a",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon1.png",
+        "selectedIconPath": "/images/icon1-1.png"
+      },
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "预约",
+        "iconPath": "/images/icon2.png",
+        "selectedIconPath": "/images/icon2-1.png"
+      },
+      {
+        "pagePath": "pages/peisong/peisong",
+        "text": "配送方式",
+        "iconPath": "/images/icon3.png",
+        "selectedIconPath": "/images/icon3-1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/icon4.png",
+        "selectedIconPath": "/images/icon4-1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

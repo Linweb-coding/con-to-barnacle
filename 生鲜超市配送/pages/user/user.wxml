@@ -1,0 +1,85 @@
+<view class="header" bindtap="goToLogin">
+  <view class="avatar-container">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </view>
+  <text class="login-text">请点击登录</text>
+</view>
+
+<!-- 新增内容容器，实现左右边距 -->
+<view class="content-container">
+  <view class="order" bindtap="goToAllOrders">
+    <text class="order-title">所有订单</text>
+    <image class="right-arrow" style="margin-left: 480rpx;" src="/images/arrow-right.png"></image>
+  </view>
+
+  <view class="order-section">
+    <view class="order-status-container">
+      <view class="order-status" bindtap="goToOrders" data-status="{{item.text}}" wx:for="{{orderStatusList}}" wx:key="index">
+        <view class="icon-container">
+          <image class="icon" src="{{item.icon}}"></image>
+          <view class="badge" wx:if="{{item.badge}}">{{item.badge}}</view>
+        </view>
+        <text class="status-text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="message-section" bindtap="goToMessages">
+    <text class="section-title">最新消息</text>
+    <view class="message-badge" style="margin-left: 420rpx;" wx:if="{{newMessageCount}}">
+      <view class="badge-circle">{{newMessageCount}}</view>
+    </view>
+    <image class="right-arrow" src="/images/arrow-right.png"></image>
+  </view>
+
+  <view class="subscription-section" bindtap="goToSubscriptions">
+    <text class="section-title">我的订阅</text>
+    <image class="right-arrow" src="/images/arrow-right.png"></image>
+  </view>
+
+  <view class="form-section" bindtap="goToForms">
+    <text class="section-title">我的表单</text>
+    <image class="right-arrow" src="/images/arrow-right.png"></image>
+  </view>
+
+  <view class="collection-section" bindtap="goToCollections">
+    <text class="section-title">我的收藏</text>
+    <image class="right-arrow" src="/images/arrow-right.png"></image>
+  </view>
+
+  <view class="address-section">
+    <view class="address-item" bindtap="goToAddressDetail">
+      <image class="address-icon" src="/images/location-icon.png"></image>
+      <text class="address-text">广州市海珠区</text>
+      <text class="distance-text">100m</text>
+      <image class="right-arrow" style="margin-left: 280rpx;" src="/images/arrow-right.png"></image>
+    </view>
+    
+    <view class="address-item" bindtap="goToPhoneDetail">
+      <image class="address-icon" src="/images/phone-icon.png"></image>
+      <text class="phone-number">{{phoneNumber}}</text>
+      <image class="right-arrow" style="margin-left: 350rpx;" src="/images/arrow-right.png"></image>
+    </view>
+    
+    <view class="address-item">
+      <image class="address-icon" src="/images/time-icon.png"></image>
+      <text class="work-time">周一至周五 09:00-18:00</text>
+    </view>
+    
+    <view class="address-item">
+      <image class="address-icon" src="/images/icon1.png"></image>
+      <text class="template-text">这是商超行业的小程序</text>
+    </view>
+  </view>
+
+  <button class="logout-button" bindtap="logout">退出当前登录</button>
+</view>
+
+<view class="contact-buttons">
+  <view class="contact-button" bindtap="call">
+    <image src="/images/phone-icon.png"></image>
+  </view>
+  <view class="contact-button" bindtap="chat">
+    <image src="/images/chat-icon.png"></image>
+  </view>
+</view>

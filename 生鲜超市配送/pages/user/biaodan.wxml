@@ -1,0 +1,151 @@
+<view class="container">
+  <!-- 分页容器 -->
+  <swiper current="{{currentPage}}" bindchange="onPageChange" indicator-dots="{{false}}" style="height: 1500rpx;">
+    <!-- 第1页 -->
+    <swiper-item>
+      <view class="page">
+        <!-- 表单标题 -->
+        <view class="title">表单名称（示例数据）</view>
+
+        <!-- 简化的表单项结构 -->
+        <view class="form-item">
+          <view class="form-label">请输入单行文本</view>
+          <view class="form-content">
+            <input type="text" value="{{singleText}}" bindinput="onSingleTextChange" />
+          </view>
+        </view>
+
+        <!-- 单选按钮 -->
+        <view class="form-item">
+          <text class="label">单选按钮</text>
+          <radio-group bindchange="onRadioChange">
+            <label><radio value="选项一" checked="{{radioValue === '选项一'}}">选项一</radio></label>
+          </radio-group>
+        </view>
+
+        <!-- 多选按钮 -->
+        <view class="form-item">
+          <text class="label">多选按钮</text>
+          <checkbox-group bindchange="onCheckboxChange">
+            <label><checkbox value="选项一" checked="{{checkValues.includes('选项一')}}">选项一</checkbox></label>
+            <label><checkbox value="选项二" checked="{{checkValues.includes('选项二')}}">选项二</checkbox></label>
+          </checkbox-group>
+        </view>
+
+        <!-- 多行文本 -->
+        <view class="form-item">
+          <text class="label">请输入多行文本</text>
+          <textarea value="{{multiText}}" bindinput="onMultiTextChange"></textarea>
+        </view>
+
+        <!-- 文件上传（图片/视频） -->
+        <view class="form-item">
+          <text class="label">请上传文件</text>
+          <button bindtap="chooseFile">选择文件</button>
+          <view class="file-msg">{{fileMsg}}</view>
+          <!-- 预览区域 -->
+          <view class="preview" wx:if="{{tempFilePath}}">
+            <image wx:if="{{fileType === 'image'}}" src="{{tempFilePath}}" mode="widthFix" />
+            <video wx:if="{{fileType === 'video'}}" src="{{tempFilePath}}" controls />
+          </view>
+        </view>
+
+        <!-- 日期时间 -->
+        <view class="form-item">
+          <text class="label">请输入日期时间</text>
+          <picker mode="date" value="{{dateTime}}" start="1900-01-01" end="2100-12-31" bindchange="onDateChange">
+            <view>{{dateTime}}</view>
+          </picker>
+        </view>
+
+        <!-- 手机号码 -->
+        <view class="form-item">
+          <text class="label">请输入手机号码</text>
+          <input type="tel" value="{{phone}}" bindinput="onPhoneChange" />
+        </view>
+      </view>
+    </swiper-item>
+
+    <!-- 第2页 -->
+    <swiper-item>
+      <view class="page">
+        <!-- 手机号码（延续显示） -->
+        <view class="form-item">
+          <text class="label">请输入手机号码</text>
+          <input type="tel" value="{{phone}}" bindinput="onPhoneChange" />
+        </view>
+
+        <!-- 下拉选项 -->
+        <view class="form-item">
+          <text class="label">下拉选项</text>
+          <picker mode="selector" range="{{selectorRange}}" value="{{selectorIndex}}" bindchange="onSelectorChange">
+            <view>{{selectorRange[selectorIndex]}}</view>
+          </picker>
+        </view>
+
+        <!-- 省市区县 -->
+        <view class="form-item">
+          <text class="label">请选择省市区县</text>
+          <picker mode="region" value="{{region}}" bindchange="onRegionChange">
+            <view>{{region[0]}}省{{region[1]}}市{{region[2]}}县</view>
+          </picker>
+        </view>
+
+        <!-- 地理位置 -->
+        <view class="form-item">
+          <text class="label">地理位置</text>
+          <button bindtap="chooseLocation">选择位置</button>
+          <view>{{location}}</view>
+        </view>
+
+        <!-- 邮箱地址 -->
+        <view class="form-item">
+          <text class="label">请输入邮箱地址</text>
+          <input type="text" value="{{email}}" bindinput="onEmailChange" />
+        </view>
+
+        <!-- 身份证号 -->
+        <view class="form-item">
+          <text class="label">请输入身份证号</text>
+          <input type="text" value="{{idCard}}" bindinput="onIdCardChange" />
+        </view>
+
+        <!-- 在线评分（星级） -->
+        <view class="form-item">
+          <text class="label">在线评分</text>
+          <view class="stars">
+            <block wx:for="{{5}}" wx:key="index">
+              <image 
+                src="{{(index < (touchStar || star)) ? '/images/star-filled.png' : '/images/star-empty.png'}}" 
+                bindtap="onStarClick" 
+                bindtouchstart="onStarTouchStart"
+                bindtouchmove="onStarTouchMove"
+                bindtouchend="onStarTouchEnd"
+                data-star="{{index}}"
+              />
+            </block>
+          </view>
+        </view>
+
+        <!-- 提交时间（模拟） -->
+        <view class="submit-time">提交时间：2019-10-23 03:44</view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 分页指示器 -->
+  <view class="page-indicator" style="position: fixed; bottom: 20rpx; left: 50%; transform: translateX(-50%);">
+    {{currentPage + 1}} / 2
+  </view>
+
+  <!-- 左右翻页图标 -->
+  <view class="page-control">
+    <image src="/images/prev-icon.png" bindtap="prevPage" style="position: fixed; bottom: 20rpx; left: 20rpx; width: 40rpx; height: 40rpx;" />
+    <image src="/images/next_icon.png" bindtap="nextPage" style="position: fixed; bottom: 20rpx; right: 20rpx; width: 40rpx; height: 40rpx;" />
+  </view>
+    <!-- 浮窗返回首页 -->
+    <view class="floating-home" bindtap="goHome">
+    <image src="/images/icon1.png"></image>
+  </view>
+</view>
+ 

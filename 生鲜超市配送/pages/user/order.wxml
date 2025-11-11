@@ -1,0 +1,44 @@
+<view class="order-list">
+  <!-- 顶部导航栏 -->
+  <view class="tab-bar">
+    <view 
+      wx:for="{{tabList}}" 
+      wx:key="index" 
+      class="tab-item {{currentTab === index ? 'active' : ''}}"
+      bindtap="switchTab"
+      data-index="{{index}}"
+    >
+      {{item}}
+    </view>
+  </view>
+
+  <!-- 订单列表 -->
+  <block wx:for="{{filteredOrderList}}" wx:key="orderId">
+    <view class="order-item">
+      <view class="order-header">
+        <view class="order-id">订单号：{{item.orderId}}</view>
+        <view class="order-status {{item.statusClass}}">{{item.status}}</view>
+      </view>
+      <view class="order-info">
+        <image class="order-icon" src="/images/order-icon.png"></image>
+        <view class="order-desc">
+          <view class="service-name">{{item.serviceName}}</view>
+          <view class="service-desc">{{item.serviceDesc}}</view>
+          <view class="price">¥{{item.price}} <text class="original-price">¥{{item.originalPrice}}</text></view>
+        </view>
+      </view>
+      <view class="order-action" wx:if="{{item.actions && item.actions.length > 0}}">
+        <button 
+          wx:for="{{item.actions}}" 
+          wx:key="index" 
+          class="action-btn {{item.btnClass}}"
+          bindtap="handleAction"
+          data-orderid="{{item.orderId}}"
+          data-action="{{item.action}}"
+        >
+          {{item.text}}
+        </button>
+      </view>
+    </view>
+  </block>
+</view>

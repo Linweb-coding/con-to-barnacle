@@ -1,0 +1,70 @@
+<view class="fresh-market-container">
+  <!-- 头部 -->
+  <view class="header">
+    <image class="bg-img" src="http://8.138.84.102/images/bg.jpg" mode="aspectFill"></image>
+    <!-- 中间带文字的圆圈图 -->
+    <image class="circle-img" src="http://8.138.84.102/images/bg1.png">
+      <image class="text-img" src="http://8.138.84.102/images/shenxian.png"></image>
+    </image>
+    <view class="text-container">
+      <text class="image-text">
+        1小时极速送达
+      </text>
+      <text class="image-text1">有机新鲜  质量保证</text>
+    </view>
+  </view>
+  <view class="button-overlay">
+      <view class="button-group">
+        <view class="button" bindtap="goToBooking" data-category="蔬果">蔬果</view>
+        <view class="button" bindtap="goToBooking" data-category="肉类">肉类</view>
+      </view>
+      <view class="button-group">
+        <view class="button" bindtap="goToBooking" data-category="零食">零食</view>
+        <view class="button" bindtap="goToBooking" data-category="其他">其他</view>
+      </view>
+  </view>
+</view>
+
+<view class="theme-selection">
+  <text class="section-title">-今日特价-</text>
+  <scroll-view class="theme-scroll-view" scroll-x="true" show-scrollbar="false" enable-flex="true">
+    <view class="theme-item-wrapper">
+      <view class="theme-item" wx:for="{{themeList}}" wx:key="id" 
+            bindtap="navigateToThemeDetail" data-id="{{item.id}}">
+        <image class="theme-image" src="{{item.imgUrl}}" mode="aspectFill" lazy-load></image>
+        <text class="theme-item-text">{{item.title}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="fruit-container">
+  <image class="fruit-img" src="http://8.138.84.102/images/chengzi.png"></image> <!-- 替换为实际香橙图片路径，可放在项目的images目录下 -->
+  <view class="fruit-info">
+    <text class="fruit-title">[今日特价] 新奇士香橙500g</text>
+    <text class="fruit-desc">进口香橙 个大香甜</text>
+    <text class="fruit-price">¥18.08</text>
+    <button class="order-btn" bindtap="handleOrder">预约配送</button>
+  </view>
+</view>
+  <!-- 精选商品标题 -->
+  <view class="jinxuan">
+  <view class="section-title">-精选商品-</view>
+
+  <!-- 精选商品列表 -->
+  <view class="goods-list">
+    <view class="goods-item" wx:for="{{goodsList}}" wx:key="id">
+      <image class="goods-img" src="{{item.img}}"></image>
+      <text class="goods-name">{{item.name}}</text>
+      <text class="goods-price">{{item.price}}</text>
+	  </view>
+    </view>
+  </view></view>
+  <!-- 门店环境 -->
+  <view class="container" bindtap="goToEnvPage"> 
+  <text class="section-title">-门店环境-</text>
+  <image class="env-img" src="http://8.138.84.102/images/mendianhuanjing.jpg"></image>
+</view>
+<view class="contact-buttons">
+<view class="contact-button" bindtap="makeCall">
+    <image src="/images/phone-icon.png"></image>
+  </view></view>
+	

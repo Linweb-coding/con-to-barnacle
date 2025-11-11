@@ -1,0 +1,40 @@
+<!-- pages/booking/detail.wxml -->
+<view class="container">
+  <!-- 使用scroll-view包裹需要滚动的内容 -->
+  <scroll-view class="scroll-container" scroll-y="true">
+    <!-- 添加加载状态提示 -->
+    <view wx:if="{{!currentGoods}}" class="loading-container">
+      <text>加载中...</text>
+    </view>
+    
+    <!-- 商品详情内容 -->
+    <view wx:if="{{currentGoods}}">
+      <!-- 商品图片区域 -->
+      <image class="goods-img" src="{{currentGoods.image}}" mode="widthFix"></image> 
+      
+      <!-- 商品标题及简介 -->
+      <view class="goods-info">
+        <text class="goods-title">{{currentGoods.title}}</text>
+        <text class="goods-desc">{{currentGoods.desc}}</text>
+        
+        <!-- 价格区域 -->
+        <view class="price-area">
+          <text class="price">¥{{currentGoods.price}}</text>
+          <text class="reserve-info">已预约：{{currentGoods.reserved}} 剩余：{{currentGoods.remaining}}</text>
+        </view>
+      </view>
+
+      <!-- 服务详情区域 -->
+      <view class="service-title">服务详情</view>
+      <view class="service-desc">
+        {{currentGoods.serviceDesc}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 固定的操作按钮区域 -->
+  <view class="fixed-btn-area">
+    <button class="phone-btn" bindtap="callPhone">电话</button>
+    <button class="reserve-btn" bindtap="handleReserve">立即预约</button>
+  </view>
+</view>

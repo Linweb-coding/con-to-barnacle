@@ -1,0 +1,98 @@
+.env-img {
+	border-top: 1rpx solid #eee;
+	width: 97%;
+	height: 400rpx;
+	padding: 10rpx;
+	margin-bottom: 10rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+	box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+	display: inline-block;
+  }
+  .env-desc {
+	font-size: 25rpx;
+	color: #333;
+	margin-top: 8rpx;
+  }
+  .title {
+    height: 250rpx;
+    font-size: 30rpx;
+    color: #333;
+    padding: 15rpx;
+    border-bottom: 1rpx solid #eee;
+    border-top: 1rpx solid #eee;
+    border-radius: 30rpx;
+  }
+  /* 固定在底部的按钮组样式 */
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 15rpx;
+  border-top: 1rpx solid #eee;
+  z-index: 100; /* 确保在最上层 */
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 26rpx;
+  width: 80rpx; /* 固定宽度，防止内容挤压 */
+}
+
+.btn-item image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.btn-item text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.consult-btn {
+  flex: 1;
+  background-color: #e63946;
+  color: rgb(255, 255, 255);
+  border-radius: 50rpx;
+  height: 100rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 38rpx;
+}
+
+.contact-buttons {
+  position: fixed;
+  bottom: 40rpx;
+  top:850rpx;
+  right: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-button {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 30rpx; /* 减小间距，从90rpx改为30rpx */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85); /* 添加背景透明度 */
+  border-radius: 50%;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.contact-button image {
+  width: 50%;
+  height: 50%;
+}

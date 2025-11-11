@@ -1,0 +1,207 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280rpx;
+  background-color: #d83b3b;
+  flex-direction: column; 
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+/* 新增全局内容容器 */
+.content-container {
+  margin-top: 30rpx; /* 头部与下方内容间距 */
+  margin-left: 25rpx; /* 左右边距 */
+  margin-right: 25rpx;
+  background-color: rgb(255, 255, 255); /* 形成白色背景大盒子 */
+  border-radius: 30rpx; /* 容器圆角 */
+  padding-bottom: 50rpx; /* 预留底部空间 */
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05); /* 轻微阴影 */
+}
+
+.avatar-container {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 80rpx;
+  overflow: hidden;
+  margin-bottom: 10rpx; 
+  border: 2rpx solid white; /* 头像边框 */
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.login-text {
+  color: white;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+  cursor: pointer;
+  color: #353535;
+}
+
+.order-title {
+  font-size: 32rpx;
+}
+
+.order-section {
+  padding: 30rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.order-status-container {
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+}
+
+.order-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%; /* 平均分布5个状态项 */
+  padding: 10rpx 0;
+}
+
+.icon-container {
+  width: 65rpx;
+  height: 65rpx;
+  margin-bottom: 10rpx;
+  position: relative; 
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.badge {
+  min-width: 32rpx;
+  height: 32rpx;
+  padding: 0 6rpx;
+  background-color: white;
+  color: rgb(201, 66, 66);
+  text-align: center;
+  line-height: 32rpx;
+  border-radius: 16rpx;
+  border: 2rpx solid rgb(201, 66, 66);
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  font-size: 24rpx;
+  box-sizing: border-box; /* 避免边框撑大尺寸 */
+}
+
+.status-text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.message-section,
+.subscription-section,
+.form-section,
+.collection-section {
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.message-badge {
+  width: 40rpx; 
+  height: 40rpx; 
+  background-color: rgb(226, 71, 71);
+  color: white;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+}
+
+.address-section {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.address-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.address-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.address-text,
+.phone-number,
+.work-time,
+.template-text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.distance-text {
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 10rpx;
+}
+
+.logout-button {
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 40rpx;
+  margin: 30rpx 20rpx;
+  background-color: white;
+  color: #999;
+  font-size: 30rpx;
+}
+
+.contact-buttons {
+  position: fixed;
+  bottom: 40rpx;
+  right: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-button {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.contact-button image {
+  width: 50%;
+  height: 50%;
+}
+
+/* 右侧箭头通用样式 */
+.right-arrow {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}
